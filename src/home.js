@@ -1,13 +1,25 @@
-import Icon from "./restaurant.jpg";
+import imgOne from "./restaurant1.jpeg";
+import imgTwo from "./restaurant2.jpeg";
+import imgThree from "./restaurant3.jpeg";
 
 export function component() {
   const div = document.createElement("div");
-  const header = document.createElement("h1");
-  const aboutPara = document.createElement("p");
-  const myIcon = new Image();
 
-  header.textContent = "Bella Italia";
-  myIcon.src = Icon;
+  const header = document.createElement("h1");
+  header.classList.add("header-home");
+  header.textContent = "BELLA ITALIA";
+
+  const myImgOne = new Image();
+  const myImgTwo = new Image();
+  const myImgThree = new Image();
+  myImgOne.src = imgOne;
+  myImgTwo.src = imgTwo;
+  myImgThree.src = imgThree;
+  myImgOne.classList.add("mySlides", "fade");
+  myImgTwo.classList.add("mySlides", "fade");
+  myImgThree.classList.add("mySlides", "fade");
+
+  const aboutPara = document.createElement("p");
   aboutPara.textContent =
     "Welcome to Bella Italia, where the essence of Italy comes to life with every bite. Our restaurant is renowned for its authentic flavors, crafted with the finest ingredients and traditional recipes passed down through generations. From our perfectly seasoned pasta dishes to our wood-fired pizzas, every meal is a celebration of Italy's rich culinary heritage. Whether you're enjoying a romantic dinner or a family gathering, our warm ambiance and friendly staff ensure a dining experience like no other. Come savor the taste of Italy today! Buon Appetito!";
 
@@ -40,6 +52,14 @@ export function component() {
     "1234 Pasta Lane, Culinary City, FL 56789, United States";
   locationDiv.append(locationHeader, location);
 
-  div.append(header, myIcon, aboutPara, hoursDiv, locationDiv);
+  div.append(
+    header,
+    myImgOne,
+    myImgTwo,
+    myImgThree,
+    aboutPara,
+    hoursDiv,
+    locationDiv
+  );
   return div;
 }
