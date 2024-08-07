@@ -184,5 +184,10 @@ export function content() {
     sideDishesContainer,
     beveragesContainer
   );
-  return div;
+
+  const menuContainer = document.createElement("div");
+  menuContainer.classList.add("menu-container");
+  menuContainer.appendChild(div);
+
+  return menuContainer;
 }

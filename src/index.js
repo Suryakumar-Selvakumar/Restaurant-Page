@@ -33,16 +33,22 @@ btnHome.addEventListener("click", () => {
 
 btnMenu.addEventListener("click", () => {
   div.innerHTML = "";
+  slideShow = false;
   div.appendChild(content());
 });
 
 btnContact.addEventListener("click", () => {
   div.innerHTML = "";
+  slideShow = false;
   div.appendChild(contact());
 });
 
 let slideIndex = 0;
-showSlides();
+let slideShow = true;
+
+if(slideShow === true) {
+  showSlides();
+}
 
 function showSlides() {
   let i;
