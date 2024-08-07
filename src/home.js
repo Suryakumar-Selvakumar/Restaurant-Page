@@ -1,13 +1,13 @@
-import imgOne from "./restaurant1.jpeg";
-import imgTwo from "./restaurant2.jpeg";
-import imgThree from "./restaurant3.jpeg";
+import imgOne from "./restaurantAlt.jpg";
+import imgTwo from "./restaurantDif.jpg";
+import imgThree from "./restaurant.jpg";
 
 export function component() {
   const div = document.createElement("div");
 
-  const header = document.createElement("h1");
-  header.classList.add("header-home");
-  header.textContent = "BELLA ITALIA";
+  // const header = document.createElement("h1");
+  // header.classList.add("header-home");
+  // header.textContent = "BELLA ITALIA";
 
   const myImgOne = new Image();
   const myImgTwo = new Image();
@@ -20,13 +20,16 @@ export function component() {
   myImgThree.classList.add("mySlides", "fade");
 
   const aboutPara = document.createElement("p");
+  aboutPara.classList.add("about-para");
   aboutPara.textContent =
     "Welcome to Bella Italia, where the essence of Italy comes to life with every bite. Our restaurant is renowned for its authentic flavors, crafted with the finest ingredients and traditional recipes passed down through generations. From our perfectly seasoned pasta dishes to our wood-fired pizzas, every meal is a celebration of Italy's rich culinary heritage. Whether you're enjoying a romantic dinner or a family gathering, our warm ambiance and friendly staff ensure a dining experience like no other. Come savor the taste of Italy today! Buon Appetito!";
 
   const hoursDiv = document.createElement("div");
+  hoursDiv.classList.add("hours-div");
   const hoursHeader = document.createElement("h2");
   hoursHeader.textContent = "Hours";
   const hours = document.createElement("div");
+  hours.classList.add("hours");
   const hrOne = document.createElement("p");
   hrOne.textContent = "Monday: 11am - 9pm";
   const hrTwo = document.createElement("p");
@@ -45,21 +48,27 @@ export function component() {
   hoursDiv.append(hoursHeader, hours);
 
   const locationDiv = document.createElement("div");
+  locationDiv.classList.add("location");
   const locationHeader = document.createElement("h2");
   locationHeader.textContent = "Location";
   const location = document.createElement("p");
   location.textContent =
-    "1234 Pasta Lane, Culinary City, FL 56789, United States";
+    "Jumeira Bay Island, Jumeira 2, Dubai, United Arab Emirates";
   locationDiv.append(locationHeader, location);
 
+  const copyRight = document.createElement("p");
+  copyRight.classList.add("copy-right-para");
+  copyRight.textContent = "© All Rights Reserved";
+
   div.append(
-    header,
+    // header,
     myImgOne,
     myImgTwo,
     myImgThree,
     aboutPara,
     hoursDiv,
-    locationDiv
+    locationDiv,
+    copyRight
   );
   return div;
 }

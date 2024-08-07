@@ -2,10 +2,12 @@ export function content() {
   const div = document.createElement("div");
 
   const header = document.createElement("h1");
-  header.textContent = "Menu";
+  header.classList.add("header-menu");
+  header.textContent = "MENU";
 
   //APPETIZERS
   const appetizersContainer = document.createElement("div");
+  appetizersContainer.classList.add("appetizers-container");
 
   const headerAppetizers = document.createElement("h1");
   headerAppetizers.textContent = "Appetizers";
@@ -51,6 +53,7 @@ export function content() {
 
   //MAIN COURSE
   const mainCourseContainer = document.createElement("div");
+  mainCourseContainer.classList.add("main-course-container");
 
   const headermainCourse = document.createElement("h1");
   headermainCourse.textContent = "Main Course";
@@ -96,6 +99,7 @@ export function content() {
 
   //SIDE DISHES
   const sideDishesContainer = document.createElement("div");
+  sideDishesContainer.classList.add("side-dishes-container");
 
   const headerSideDishes = document.createElement("h1");
   headerSideDishes.textContent = "Side Dishes";
@@ -108,26 +112,26 @@ export function content() {
   const sideDishOneDesc = document.createElement("p");
   sideDishOneDesc.textContent = "Toasted bread with garlic, butter, and herbs.";
   const sideDishOnePrice = document.createElement("p");
-  sideDishOnePrice.textContent = "$5.00";
+  sideDishOnePrice.textContent = "$4.50";
   divSideDishOne.append(sideDishOne, sideDishOneDesc, sideDishOnePrice);
 
   const divSideDishTwo = document.createElement("div");
   const sideDishTwo = document.createElement("p");
-  sideDishTwo.textContent = "Roasted Vegetables";
+  sideDishTwo.textContent = "Sautéed Spinach";
   const sideDishTwoDesc = document.createElement("p");
   sideDishTwoDesc.textContent =
-    "Seasonal vegetables roasted with olive oil and herbs.";
+    "Fresh spinach sautéed with garlic.";
   const sideDishTwoPrice = document.createElement("p");
-  sideDishTwoPrice.textContent = "$6.50";
+  sideDishTwoPrice.textContent = "$5.00";
   divSideDishTwo.append(sideDishTwo, sideDishTwoDesc, sideDishTwoPrice);
 
   const divSideDishThree = document.createElement("div");
   const sideDishThree = document.createElement("p");
-  sideDishThree.textContent = "Parmesan Risotto";
+  sideDishThree.textContent = "Roasted Potatoes";
   const sideDishThreeDesc = document.createElement("p");
-  sideDishThreeDesc.textContent = "Creamy risotto with Parmesan cheese.";
+  sideDishThreeDesc.textContent = "Crispy roasted potatoes seasoned with herbs.";
   const sideDishThreePrice = document.createElement("p");
-  sideDishThreePrice.textContent = "$8.00";
+  sideDishThreePrice.textContent = "$5.50";
   divSideDishThree.append(sideDishThree, sideDishThreeDesc, sideDishThreePrice);
 
   sideDishes.append(divSideDishOne, divSideDishTwo, divSideDishThree);
@@ -135,6 +139,7 @@ export function content() {
 
   //BEVERAGES
   const beveragesContainer = document.createElement("div");
+  beveragesContainer.classList.add("beverages-container")
 
   const headerBeverages = document.createElement("h1");
   headerBeverages.textContent = "Beverages";
@@ -171,6 +176,7 @@ export function content() {
   beverages.append(divBeverageOne, divBeverageTwo, divBeverageThree);
   beveragesContainer.append(headerBeverages, beverages);
 
+  div.classList.add("menu-div");
   div.append(
     header,
     appetizersContainer,
