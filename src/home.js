@@ -5,10 +5,6 @@ import imgThree from "./restaurant.jpg";
 export function component() {
   const div = document.createElement("div");
 
-  // const header = document.createElement("h1");
-  // header.classList.add("header-home");
-  // header.textContent = "BELLA ITALIA";
-
   const myImgOne = new Image();
   const myImgTwo = new Image();
   const myImgThree = new Image();
@@ -61,7 +57,6 @@ export function component() {
   copyRight.textContent = "© All Rights Reserved";
 
   div.append(
-    // header,
     myImgOne,
     myImgTwo,
     myImgThree,
