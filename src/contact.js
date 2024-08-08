@@ -22,7 +22,7 @@ export function contact() {
   const contactOnePhone = document.createElement("p");
   contactOnePhone.textContent = "(123) 456-7890";
   const contactOneEmail = document.createElement("p");
-  contactOneEmail.textContent = "giovanni.rossi@example.com";
+  contactOneEmail.textContent = "giovanni.rossi@fake.com";
   contactOne.append(
     contactOneName,
     contactOnePosition,
@@ -44,7 +44,7 @@ export function contact() {
   const contactTwoPhone = document.createElement("p");
   contactTwoPhone.textContent = "(123) 456-7891";
   const contactTwoEmail = document.createElement("p");
-  contactTwoEmail.textContent = "maria.bianchi@example.com";
+  contactTwoEmail.textContent = "maria.bianchi@fake.com";
   contactTwo.append(
     contactTwoName,
     contactTwoPosition,
@@ -66,7 +66,7 @@ export function contact() {
   const contactThreePhone = document.createElement("p");
   contactThreePhone.textContent = "(123) 456-7892";
   const contactThreeEmail = document.createElement("p");
-  contactThreeEmail.textContent = "luca.verdi@example.com";
+  contactThreeEmail.textContent = "luca.verdi@fake.com";
   contactThree.append(
     contactThreeName,
     contactThreePosition,
@@ -88,7 +88,7 @@ export function contact() {
   const contactFourPhone = document.createElement("p");
   contactFourPhone.textContent = "(123) 456-7893";
   const contactFourEmail = document.createElement("p");
-  contactFourEmail.textContent = "isabella.neri@example.com";
+  contactFourEmail.textContent = "isabella.neri@fake.com";
   contactFour.append(
     contactFourName,
     contactFourPosition,
@@ -98,17 +98,15 @@ export function contact() {
   contactFourDiv.append(myContactFourImg, contactFour);
 
   div.classList.add("contacts-div");
-  div.append(
-    header,
-    contactOneDiv,
-    contactTwoDiv,
-    contactThreeDiv,
-    contactFourDiv
-  );
+  div.append(contactOneDiv, contactTwoDiv, contactThreeDiv, contactFourDiv);
+
+  const contactsOuterContainer = document.createElement("div");
+  contactsOuterContainer.classList.add("contacts-outer-container");
+  contactsOuterContainer.append(header, div);
 
   const contactsContainer = document.createElement("div");
   contactsContainer.classList.add("contacts-container");
-  contactsContainer.appendChild(div);
+  contactsContainer.append(contactsOuterContainer);
 
   return contactsContainer;
 }

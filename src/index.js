@@ -3,6 +3,8 @@ import { content } from "./menu";
 import { contact } from "./contact";
 import "./style.css";
 
+let slideShow = true;
+
 const div = document.querySelector("#content");
 const btnHome = document.querySelector(".home");
 const btnMenu = document.querySelector(".menu");
@@ -44,9 +46,8 @@ btnContact.addEventListener("click", () => {
 });
 
 let slideIndex = 0;
-let slideShow = true;
 
-if(slideShow === true) {
+if (slideShow === true) {
   showSlides();
 }
 

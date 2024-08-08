@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: #343a40;
+  background-color: #212529;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -97,7 +97,7 @@ nav {
   top: 30vh;
   left: 70vw;
   font-size: clamp(0.5rem, 2vw + 0.5rem, 1.25rem);
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 1rem 0 1rem 0;
   width: 250px;
   display: flex;
@@ -124,7 +124,7 @@ nav {
   top: 75vh;
   left: 70vw;
   font-size: clamp(0.5rem, 2vw + 0.5rem, 1.25rem);
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 1rem 0 1rem 1rem;
   display: flex;
   flex-direction: column;
@@ -143,7 +143,7 @@ nav {
   width: 600px;
   top: 55vh;
   left: 10vw;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 2rem 2rem;
   text-align: justify;
 }
@@ -209,6 +209,7 @@ nav {
   justify-content: space-between;
   border-radius: 15px;
   color: black;
+  box-shadow: 3px 4px 10px 1px rgb(90, 90, 90);
 }
 
 .appetizers-container > div > div > p:first-child {
@@ -278,6 +279,7 @@ nav {
   justify-content: space-between;
   border-radius: 15px;
   color: black;
+  box-shadow: 3px 4px 10px 1px rgb(90, 90, 90);
 }
 
 .main-course-container > div > div > p:first-child {
@@ -347,6 +349,7 @@ nav {
   justify-content: space-between;
   border-radius: 15px;
   color: black;
+  box-shadow: 3px 4px 10px 1px rgb(90, 90, 90);
 }
 
 .side-dishes-container > div > div > p:first-child {
@@ -416,6 +419,7 @@ nav {
   justify-content: space-between;
   border-radius: 15px;
   color: black;
+  box-shadow: 3px 4px 10px 1px rgb(90, 90, 90);
 }
 
 .beverages-container > div > div > p:first-child {
@@ -462,111 +466,68 @@ nav {
   padding: 1vh 0;
 }
 
-.contacts-div {
-  display: grid;
-  grid-template-rows: min-content 1fr 1fr 1fr 1fr;
-  gap: 2vh;
-  padding: 1vh 0;
+.contacts-outer-container {
+  display: flex;
+  flex-direction: column;
+  width: max(60%, 600px);
+  gap: 1vh;
   background-color: #6c757d;
-  width: 90%;
   border-radius: 15px;
-  justify-content: center;
 }
 
-.contacts-div > h1 {
+.contacts-outer-container > h1 {
   text-align: center;
   font-size: clamp(2rem, 3vw + 1rem, 3rem);
+}
+
+.contacts-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 2vh;
+  padding: 1vh 1vw;
+  border-radius: 15px;
+  justify-content: center;
 }
 
 .contacts-div > div {
   display: flex;
   padding: 1vh 1vw;
-  gap: 1vh;
+  gap: 2vh;
   background-color: #343a40;
+  border-radius: 15px;
+  box-shadow: 3px 4px 10px 1px rgb(90, 90, 90);
 }
 
 .contacts-div > div > div {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  justify-content: center;
 }
 
-.contacts-div > div > div:first-child > p:first-child {
-  grid-area: contact-one-name;
+.contacts-div > div > div > p:first-child {
   font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
   font-weight: 550;
 }
 
-.contacts-div > div:first-child > p:nth-child(2) {
-  grid-area: contact-one-position;
+.contacts-div > div > div > p:nth-child(2) {
   font-weight: 550;
   font-size: clamp(0.75rem, 2vw + 0.5rem, 1.5rem);
-  align-self: flex-start;
 }
 
-.contacts-div > div:first-child > p:nth-child(3) {
-  grid-area: contact-one-number;
+.contacts-div > div > div > p:nth-child(3) {
   font-size: clamp(0.75rem, 2vw + 0.5rem, 1.5rem);
-  align-self: flex-start;
   font-style: italic;
 }
 
-.contacts-div > div:first-child > p:last-child {
-  grid-area: contact-one-email;
+.contacts-div > div > div > p:last-child {
   font-size: clamp(0.75rem, 2vw + 0.5rem, 1.5rem);
-  align-self: flex-start;
 }
 
-.contacts-div > div > div:first-child {
-  grid-template-areas:
-    "contact-one-pic contact-one-name"
-    "contact-one-pic contact-one-position"
-    "contact-one-pic contact-one-number"
-    "contact-one-pic contact-one-email";
-}
-
-.contact-one-img {
-  grid-area: contact-one-pic;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.contacts-div > div > div:nth-child(2) {
-  grid-template-areas:
-    "contact-two-pic first-para"
-    "contact-two-pic second-para"
-    "contact-two-pic third-para"
-    "contact-two-pic fourth-para";
-}
-
-.contact-two-img {
-  grid-area: contact-two-pic;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.contacts-div > div > div:nth-child(3) {
-  grid-template-areas:
-    "contact-three-pic first-para"
-    "contact-three-pic second-para"
-    "contact-three-pic third-para"
-    "contact-three-pic fourth-para";
-}
-
-.contact-three-img {
-  grid-area: contact-three-pic;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.contacts-div > div > div:nth-child(2) {
-  grid-template-areas:
-    "contact-four-pic first-para"
-    "contact-four-pic second-para"
-    "contact-four-pic third-para"
-    "contact-four-pic fourth-para";
-}
-
+.contact-one-img,
+.contact-two-img,
+.contact-three-img,
 .contact-four-img {
-  grid-area: contact-four-pic;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 250px;
 }
